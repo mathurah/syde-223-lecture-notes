@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+Week-1/.DS_Store
+Week-1/Week1_pointer/Week1_pointer.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Week-1/Week1_pointer/Week1_pointer.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+Week-1/Week1_pointer/Week1_pointer.xcodeproj/project.xcworkspace/xcuserdata/mravigulan.xcuserdatad/UserInterfaceState.xcuserstate
+Week-1/Week1_pointer/Week1_pointer.xcodeproj/xcuserdata/mravigulan.xcuserdatad/xcschemes/xcschememanagement.plist
+Week-1/Week1_pointer_to_pointer/Week1_pointer_to_pointer.xcodeproj/project.pbxproj
+*.xcworkspacedata
+*.plist
+*.xcuserstate
+*.plist
+*.pbxproj
+*.xcworkspacedata
