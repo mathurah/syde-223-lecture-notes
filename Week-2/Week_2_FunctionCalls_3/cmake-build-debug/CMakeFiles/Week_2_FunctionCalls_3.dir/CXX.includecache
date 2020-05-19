@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mravigulan/OneDrive - University of Waterloo/1B/SYDE 223/syde-223-lecture-notes/Week-2/Week_2_FunctionCalls_3/main.cpp
+iostream
+-
+
