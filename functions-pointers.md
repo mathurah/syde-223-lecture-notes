@@ -110,3 +110,25 @@ int main() {
 
 }
 ```
+
+### Output
+```
+Before function call: Value of a: 1.   Address of a: 0xffffcc1c
+
+Before function call: Value of b: 10.  Address of b: 0xffffcc18
+
+ 
+
+p1 is pointing to an int at address: 0xffffcc1c
+
+p2 is pointing to an int at address: 0xffffcc18
+
+ 
+
+After function call: Value of a: 2.   Address of a: 0xffffcc1c
+
+After function call: Value of b: 12.  Address of b: 0xffffcc18
+```
+**Things to note**
+- Local variables p1 and p2 are pointers to integer
+- Using *p1 and *p2 inside the function, we can directly modify 'a' and 'b; who are outside the function call
