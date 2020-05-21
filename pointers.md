@@ -202,6 +202,38 @@ int main () {
 
 > Like I put a Coca Cola in your cup, the Coca Cola can be changed with 7-Up, no problem, but your cup is always your cup, unless you smash it.
 
+## -> Syntax
+``->`` can be used as well to access class or struct members from a pointer of an object. 
+
+### Demo Code
+``` cpp
+#include<iostream>
+using namespace std;
+
+class TestClass {
+public:
+    int i;
+    void output (){  cout<< "test output i : " << i <<  endl;   };
+};
+
+
+int main()
+{
+    TestClass staticObject;
+    TestClass *pointerToDynamicObject = new TestClass ();
+
+    staticObject.i = 10;    //for object name, . dot syntax is used to access members
+    staticObject.output();
+
+    pointerToDynamicObject->i = 20; //for pointer name, -> syntax is used.
+    pointerToDynamicObject->output();
+
+    (*pointerToDynamicObject).i = 30;   //this also works, but less frequently used. Note that ( ) is needed.
+    (*pointerToDynamicObject).output();
+
+}
+```
+
 ## Summary 
 - Pointer: Variable that stores the memory address of a variable
 - Constructor: A special kind of class member function automatically called when object is instantiated

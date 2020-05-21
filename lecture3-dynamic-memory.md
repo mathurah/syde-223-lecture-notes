@@ -156,7 +156,7 @@ int main() {
     ~Server(); //Destructor
     ```
 - Important rule: each class has only one destructor
-- When an object's default destructor is caleld, it can only automatically de-allocate the object's member variables that are statically allocated 
+- When an object's default destructor is calkld, it can only automatically de-allocate the object's member variables that are statically allocated 
 - 
 
 ### Demo Code
