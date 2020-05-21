@@ -1,4 +1,4 @@
-# Lecture 2 - Week 1
+# Pointers
 
 ## Learning Questions
 - What is a poiinter in C ++? 
