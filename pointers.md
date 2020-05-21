@@ -8,7 +8,7 @@
 
 A **memory address** is an integer
 - Often expressed in hexadecimal (base 16)
-*Ex. 0x9ffdec* (0x means followin)
+*Ex. 0x9ffdec* (0x means following)
 
 ### Declaration 
 ``` cpp 
@@ -108,6 +108,16 @@ int main(){
 
 ## What happens during new, delete, and p = NULL?
 
+**New**: dynamic memory allocation, setting with a value
+
+**Delete**: Does not delete the pointer itself, but behind the scenes it has marked the int memory free to use - **meaning of memory deallocation** 
+
+**Memory deallocation**: 
+- Just a marking of the purpose of the memory, it does NOT reset values at that address into 0.
+- If no other variable or process has used that memory space, the old value remains there. 
+
+**NULL**: Address is reset to nothing, dangling pointer issue is avoided. 
+
 ### Demo Code
 ```cpp
 #include <iostream>
@@ -187,6 +197,11 @@ int main () {
     return 0;
 }
 ```
+
+**The memory address of the pointer is const, always, unless you release it from memory.**
+
+> Like I put a Coca Cola in your cup, the Coca Cola can be changed with 7-Up, no problem, but your cup is always your cup, unless you smash it.
+
 ## Summary 
 - Pointer: Variable that stores the memory address of a variable
 - Constructor: A special kind of class member function automatically called when object is instantiated

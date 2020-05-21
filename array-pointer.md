@@ -16,7 +16,12 @@ Then, ``p=a;`` is legal. It makes ``p`` pointing to the same place as 'a'.
 
 To access the three integers in the array, you can use ``p[0], p[1], p[2];`` which is equivalent to ``*p, *(p+1), *(p+2)``. 
 
-However, ``a = p;`` is illegal because the array pointer ``'a'`` is a ``const pointer``. It's value cannnot be changed. 
+However, ``a = p;`` is illegal because the array pointer ``'a'`` is a ``const pointer``. It's value cannnot be changed.
+
+``'a'`` is the address of array ``a``, you cannot change an memory address of a variable. If you want to change the value, you can do ``*a = *p``
+
+
+
 
 ## Using new[] and delete[] operators for array
 
