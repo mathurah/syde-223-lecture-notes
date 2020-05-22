@@ -234,6 +234,111 @@ int main()
 }
 ```
 
+## Pointer Members
+**Pointer members** are usually pointing to data with dynamically allocated memory. 
+Generally speaking, you should remember to do the following things: 
+-Manually delete them *(ex. de-allocate the memory)* in the destructor
+- Manually implement deep copy in the copy constructor
+- Manually implement deep copy in the assignment operator (=) overload
+
+By default, the assignment operator (=) applied to an object does a shallow copy. Usually, a deep copy is what programmers need. 
+
+``` cpp
+#include <iostream>
+using namespace std;
+
+class MyClass{  // demo of a basic pattern of default constructor, copy constructor, assignment operator, and destructor
+public: //set as public for easy demo
+    // some pointers for data with dynamically allocated memory
+    int *p;
+    double *q;
+
+public:
+    MyClass();
+    MyClass(const MyClass & other);     // copy constructor has no return value
+    MyClass & operator = (const MyClass & other);   // will return a reference of this object itself
+    ~MyClass();
+};
+
+
+MyClass::MyClass()      // overload default constructor
+{
+    //initialize data with dynamically allocated memory
+    //e.g.,
+    p = new int (10);
+    q = new double (100.1);
+
+    //print log if needed
+    //e.g.,
+    cout << "object of MyClass constructed by default constructor" << endl;
+
+}
+MyClass::MyClass(const MyClass & other)  // overload copy constructor, 'const' sets the reference to be read-only, avoid error
+{
+    //do a deep copy of all the data from inside of 'other'
+    //note that we do not need to clear this object's existing data, because it is empty at this moment. this is different from overloading operator =
+    //e.g., deep copying
+    p = new int(* other.p);
+    q = new double(* other.q);
+
+    //print log if needed
+    //e.g.,
+    cout << "object of MyClass constructed by copy constructor" << endl;
+}
+MyClass & MyClass::operator = (const MyClass & other)   // overload operator = (assignment). the input is a reference
+        // note that the return value is a reference, which will be used in such cases: obj1 = obj2 = obj3; which means obj1.operator=(  obj2.operator=( obj3  )   ); return value from  obj2.operator=( obj3 ) is needed.
+{
+    if(this != &other)  // 'this' is a pointer to the object itself (self address). &other is the address of 'other'. this condition checks if the same object is assigned to itself. Do nothing if obj = obj; is used.
+    {
+        //clear this object's existing dynamically allocated members, which should have been initialized by constructor
+        //e.g.,
+        delete p;
+        delete q;
+
+        //do a deep copy of all the data from inside of 'other'
+        //e.g., deep copying
+        p = new int(* other.p);
+        q = new double(* other.q);
+    }
+    return *this;  // return the object itself. 'this' is pointer to self, so return *this as the object itself.
+}
+MyClass::~MyClass()     // overload destructor
+{
+    //clear this object's existing dynamically allocated members, which should have been initialized by constructor
+    //e.g.,
+    delete p;
+    delete q;
+    //setting to NULL is optional here
+
+    //print log if needed
+    //e.g.,
+    cout << "object of MyClass destructed" << endl;
+}
+
+int main(){
+    MyClass obj1;   //default constructor
+    * obj1.p = 20;
+    * obj1.q = 200.2;
+
+    MyClass obj2 = MyClass( obj1 ); //copy constructor
+
+    obj2 = obj2;    // operator =, this case will be taken care of by the line "if(this != &other)"
+    //obj2.operator=(obj2);   // this is the same thing as the above line
+
+    MyClass obj3, obj4;   //default constructor
+
+    obj4 = obj3 = obj2;
+    //obj4.operator=(  obj3.operator=( obj2  )   ); // this is the meaning of the above line
+
+    cout << * obj1.p << ", " << * obj1.q << endl;
+    cout << * obj2.p << ", " << * obj2.q << endl;
+    cout << * obj3.p << ", " << * obj3.q << endl;
+    cout << * obj4.p << ", " << * obj4.q << endl;
+
+    return 0;
+}
+```
+
 ## Summary 
 - Pointer: Variable that stores the memory address of a variable
 - Constructor: A special kind of class member function automatically called when object is instantiated
