@@ -1,5 +1,11 @@
 # Lecture 1 - Week 1
 
+## Why do we need different data structures?
+Different data structures have advantages and disadvantages. There is no best data structure that can fit the need of all applications.
+- Data structures can be compared along multiple dimensions, such as **time complexity**: time needed to complete certain tasks and memory consumption
+- If you need time to program customized data structure, you may also need to consider implementation difficulty. In practice a programmer needs to evaluate the pros and cons of different data structures and choose or make the one that best fits their needs in the specific task. 
+- The results of using different data structures may not be very significant for small projects but can be substantially different in large scale projects with large data. 
+
 **Algorithm**: Finite sequence of unambigious instructions performed to achieve a goal or compute a desired result. 
 
 Each algorithm is not a solution, but instead a precisely defined **procedure** for deriving solutions. 

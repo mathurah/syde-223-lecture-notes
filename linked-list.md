@@ -431,3 +431,198 @@ Difference between list.head and this head
 ```cpp
 this->head - //refers to the new object
 ```
+
+## What is the difference between dynamic arrays and linked list data structures?
+**Dynamic Array**: data structure implemented based on the basic array.
+- Insert operation can still happen when the array is full. 
+- It can be done by creating a larger array and copy all the data from the old one into the new one 
+
+Recal: Dynamic Array
+``` cpp
+int * foo;
+foo = new int [5];
+```
+
+**Basic Array**: 
+- In a basic array (ex. ``int a[10];``) its size is fixed and initalized at the creation of the array. 
+- The number of elements cannot exceed the size/capacity. 
+
+**Aspect** | **Dynamic Array** | **Linked List** | **Which one is better?**
+--- | --- | --- | ---
+Time to access the ``ith`` element | Very fast thanks to the index feature. | Slow due to hte lack of index. Must iterate through the list. | Dynamic Array 
+Time to ``insert``/``delete`` at the beginning | Slow. Must shift all existing elements. | Fast. Change a few pointers. | Linked list
+Time to ``insert``/``delete`` at the end | Fast when within capacity. Slow when the size of the array must be expanded. | Fast, given that a pointer to the tail is implemented. | Linked list
+Extra memory storage needed to store the data elements (storage overhead) | Little | More, due to the pointers in each node. | Dynamic array
+
+- In general, if elements need to be frequently added or removed from the list, the size of the list can change and you don't need to access random elements very often, it is better to use linked list.
+- If the size of the list is relatively stable, and you need to frequently access random elements, it is better to use dynamic array
+
+##  Removing, Replacing, and Inserting in Linked lists
+
+### Demo Code
+```cpp
+/*some basic operations for the class of linked list*/
+#include <iostream>
+using namespace std;
+typedef int DataType;
+
+struct Node {
+    DataType data;
+    Node *next;
+    Node(int x) : data(x), next(nullptr) {};//overloaded constructor
+};
+
+class LinkedList{
+    Node *head = nullptr; //this variable is private
+    //size, omitted
+
+public:
+    void insert(DataType value, int position);
+    void replace(int position, DataType value);
+    void remove(int position); //find the node at this position and remove it from the linked list
+    void print(); // print all elements in the list
+    //overload destructor, omitted
+    //overload copy constructor, omitted
+    //overload assignment operator =, omitted
+
+};
+
+void LinkedList::insert(DataType value, int position) {
+    //step 1. check position validity, compare with 0 and size,
+    //if not valid, quit, report error, or force into a valid value
+    //omitted in this demo, assuming it is valid
+
+    //step 2. create new node
+    Node *newNode = new Node(value); //* new node is a pointer (left-side), right-side is the node
+
+    //step 3. if special case, when position = 0
+    //insert as the new head
+    //3.1 when head == nullptr, or size == 0
+    if(position == 0){
+        if(head == nullptr){
+            head = newNode;
+            return;
+        }
+        else{ //3.2 when size > 0
+            newNode->next = head;
+            head = newNode;
+            return;
+        }
+    }
+
+    //step 4. when position > 0, size > 0
+    //iterate through the list to find the position
+    //with an additional pointer for the address of the previous node
+    Node *previous = head; //need to know address of previous node
+    Node *current = head->next;
+    int i = 1;
+    while (i < position) {
+        previous = current;
+        current = current->next;
+        if (current == nullptr) {
+            break; // reach the end
+        }
+        i++;
+    }
+
+    //step 5. insert the node between previous and current
+    newNode->next = current;
+    previous->next = newNode;
+
+}
+
+void LinkedList::replace(int position, DataType value) {
+    //step 1. check position validity, compare with 0 and size,
+    //if not valid, quit, report error, or force into a valid value
+    //omitted in this demo, assuming it is valid
+
+    //step 2. iterate a pointer to the position
+    Node *current = head;
+    int i = 0;
+    while (i < position) {
+        current = current->next;
+        if (current == nullptr) {
+            break; // reach the end
+        }
+        i++;
+    }
+
+    //step 3. replace the value
+    current->data = value;
+
+}
+
+void LinkedList::remove(int position) {
+    //step 1. check position validity, compare with 0 and size,
+    //if not valid, quit, report error, or force into a valid value
+    //omitted in this demo, assuming it is valid
+
+    //step 2. special case, if position == 0, remove head
+    if(position == 0){
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+        temp = nullptr;
+        return;
+    }
+
+    //step 3. iterate a pointer to the position
+    //and another pointer for the node address previous of it
+    Node *previous = head;
+    Node *current = head->next;
+    int i = 1;
+    while (i < position) {
+        previous = current;
+        current = current->next;
+        if (current == nullptr) {
+            break; // reach the end
+        }
+        i++;
+    }
+
+    //step 4. remove the node and properly link the remaining nodes.
+    previous->next = current->next;
+    delete current;
+    current = nullptr;
+}
+
+void LinkedList::print() {
+    if (head == nullptr) {
+        return;
+    }
+    //print all nodes
+    Node *temp = head;
+    while (temp != nullptr) {
+        cout<< temp->data << "->";
+        temp = temp->next;
+    }
+    cout<< endl;
+}
+
+
+int main () {
+    LinkedList myList; //name of the linked list, memory is statically allocated
+    myList.insert(2, 0); //will call the insert function
+    myList.insert(4, 1);
+    myList.insert(1, 0);
+    myList.insert(5, 3);
+    myList.insert(3, 2);
+    myList.print();
+
+    myList.replace(2, 33);
+    myList.print();
+
+    myList.remove(3);
+    myList.remove(0);
+    myList.print();
+
+    return 0;
+}
+```
+
+***Deleting**
+
+```cpp
+ delete current;  // deallocate memory pointed in the place by the pointer, actual pointer is not deleted
+
+current = nullptr; //deletes the pointer/sets it to null
