@@ -448,8 +448,8 @@ foo = new int [5];
 - The number of elements cannot exceed the size/capacity. 
 
 **Aspect** | **Dynamic Array** | **Linked List** | **Which one is better?**
---- | --- | --- | ---
-Time to access the ``ith`` element | Very fast thanks to the index feature. | Slow due to hte lack of index. Must iterate through the list. | Dynamic Array 
+--- | --- | --- | ----
+Time to access the ``ith`` element | Very fast thanks to the index feature. | Slow due to the lack of index. Must iterate through the list. | Dynamic Array 
 Time to ``insert``/``delete`` at the beginning | Slow. Must shift all existing elements. | Fast. Change a few pointers. | Linked list
 Time to ``insert``/``delete`` at the end | Fast when within capacity. Slow when the size of the array must be expanded. | Fast, given that a pointer to the tail is implemented. | Linked list
 Extra memory storage needed to store the data elements (storage overhead) | Little | More, due to the pointers in each node. | Dynamic array
