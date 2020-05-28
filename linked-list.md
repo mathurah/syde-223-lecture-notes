@@ -38,6 +38,9 @@ struct Node {
 
 
 ## Linked List
+- **Data structure consisting of a collection of node connected by pointers.**
+-Usually referes to singly linked list, where each node has only one pointer, pointing to the next node in the sequence. 
+- A head pointer is needed to store the address for the first node]
 - An ordered chain/sequence of nodes, where the pointer of each node points to the next node in the list
 - Nodes can be added to the chain to expand the storage space of the list
 - Similarly, nodes can be removed when not needed
