@@ -22,6 +22,8 @@ insert('k',1);
 insert('z',0); 
 insert('y',5); 
 insert('m', 7); // this operation is rejected because of its exceeding tail position, which is index 6 at the moment
+//Because we don't want to leave a gap in the array. If inserting at index 7, there will be a gap at index 6.
+//After the insert, size will become 7. By default, the program will assume the 7th item is at index 6. But it will be #  a random value rather than the intended value.
 ```
 The list is changed into this:
 ![](/images/sequential-list-after-insert.png)
