@@ -626,3 +626,10 @@ int main () {
  delete current;  // deallocate memory pointed in the place by the pointer, actual pointer is not deleted
 
 current = nullptr; //deletes the pointer/sets it to null
+```
+
+## Linked List Visualized
+![](/Week-3/linked-list-21.jpg)
+![](/Week-3/linked-list-22.jpg)
+![](/Week-3/linked-list-23.jpg)
+![](/Week-3/linked-list-24.jpg)
