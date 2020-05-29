@@ -49,3 +49,10 @@ A sequential list could be implemented...
 - **Fixed capacity**: basic array
 - **Dynamic capacity**: dynamic array
     - When more storage space is needed, a new larger array can be created, and the data are copied into the new array
+
+## Difference between sequential vs Linked List Implementation
+**Aspect** | **Sequential List** | **Linked List** |
+--- | --- | --- 
+**Memory Usage** | Less flexible | More flexible
+**Memory Overhead** | Less | More due to pointers
+**ith node access** | Faster | Slower (serial search)
