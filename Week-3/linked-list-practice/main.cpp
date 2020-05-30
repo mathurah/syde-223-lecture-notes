@@ -16,6 +16,7 @@ public:
     void insert(DataType value, int position);
     void replace(int position, DataType value);
     void remove(int position);
+    void fun2(struct Node* head);
     void print(); // print all elements in the list
     //overload destructor, omitted
     //overload copy constructor, omitted
@@ -138,23 +139,46 @@ void LinkedList::print() {
     cout << endl;
 
 }
+void LinkedList::fun2(struct Node* head)
+
+{
+
+    if(head == NULL)
+
+        return;
+
+    cout << head->data << " ";
+
+
+
+    if(head->next != NULL )
+
+        fun2(head->next->next);
+
+    cout << head->data << " ";
+
+}
+
 
 
 int main () {
     LinkedList myList;
-    myList.insert(2, 0);
-    myList.insert(4, 1);
     myList.insert(1, 0);
-    myList.insert(5, 3);
+    myList.insert(2, 1);
     myList.insert(3, 2);
+    myList.insert(4, 3);
+    myList.insert(5, 4);
+    myList.insert(6, 5);
     myList.print();
+    myList.fun2(struct Node);
 
-    myList.replace(2, 33);
-    myList.print();
-
-    myList.remove(3);
-    myList.remove(0);
-    myList.print();
+//    myList.replace(2, 33);
+//    myList.print();
+//
+//    myList.remove(3);
+//    myList.remove(0);
+//    myList.print();
 
     return 0;
 }
+
