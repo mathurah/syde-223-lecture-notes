@@ -13,7 +13,13 @@ Answer the following two questions
 1. How to represent the given problem using smaller versions of itself (how to design recursive cases)
     - Define what **smaller** means (smaller could be smaller input, or could mean closer to the ending point of the problem)
 2. When does the problem reach its ending point (how to design base cases)
-    - A problem reach its ending point when there is a trviail answer to the problem
+    - A problem reach its ending point when there is a trivial answer to the problem
+
+## Visualizing recursion
+- Draw a tree with brances representing the recursive calls generated from the original function call
+
+``Ex. when n = 6``
+![](/images/fibbonachi-recursion.png)
 
 ### Example: Factorial function (n!)
 - To computer ``4!`` we need to compute ``4 x 3 x 2 x 1``
@@ -89,6 +95,55 @@ int main() {
     return 0;
 }
 ```
+
+## Fibonacci 
+
+### Iterative version
+```cpp
+int fibonacciNonRecursive (int n){
+    //non recursive version. need to use a loop
+    cout<< "Calling fibonacciNonRecursive." <<endl;
+
+    if (n < 0) {
+        cout<< "Warning! Calling fibonacciNonRecursive with input < 0." <<endl;
+        return 0;
+    }
+    else if (n == 0) return 0;
+    else if (n == 1) return 1;
+    else {
+        int result;
+        int num1 = 0;
+        int num2 = 1;
+        for (int i = 2; i <= n; i++){
+            result = num1 + num2;
+            num1 = num2;
+            num2 = result;
+        }
+        return result;
+    }
+}
+```
+
+## Recusrive Fibonnaci Function
+```cpp
+int fibonacciRecursive (int n){
+    //break it down into fibonacciRecursive(n-1) + fibonacciRecursive(n-2)
+    cout<< "Calling fibonacciRecursive." <<endl;
+
+    if (n < 0) {
+        cout<< "Warning! Calling fibonacciRecursive with input < 0." <<endl;
+        return 0;
+    }
+    else if (n == 0) return 0;
+    else if (n == 1) return 1;
+// else if (n == 4) return 3;
+// else if (n == 10) return 55;
+// else if (n == 20) return 6765;
+// else if (n == 40) return 102334155;
+    else   return fibonacciRecursive(n-1) + fibonacciRecursive(n-2);
+}
+```
+Ending cases, when ``n == 0``, and ``n ==1``
 
 ## Tower of Hanoi Problem 
 The objective is to move the entire group from one peg to another, obeying the following rules
@@ -474,3 +529,21 @@ int main(){
 }
 
 ```
+
+### Recursive Algorithm that iterates through linked nodes
+- Prints each encountered data item that is divisible by 5
+- The algorithm terminates when there is no node left to visit (when the pointer reaches ``NULL``)
+
+```cpp
+void printSomeNodes (Node* node) {
+    if (node == NULL) { //check if the node is NULL
+    //write your base case here when node is NULL
+    } else {
+        //write your recursive case here
+        //check if the data item is divisuble by 5
+    }
+    if (node ->getData()%5){
+        cout << node-> getData() << endl; 
+    } //recursively process the rest of the nodes
+    printSomeNodes(node -> get Next()) 
+}

@@ -1,7 +1,7 @@
 ## Constructors
 - A special kind of class member function
     - Automatically called when object is instantiated
-    - Must be public
+    - Must be **public**
     - If no constructor is defined by the user, the system will create a default constructor, which sets data members to their default values
 - Difference from other regular member functions: 
     - They must have the **same name as the class**
