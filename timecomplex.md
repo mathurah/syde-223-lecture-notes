@@ -32,12 +32,12 @@ int SequentialSearch(int A[], int size, int K) {
 ## N aproaching infinite
 - In the **Sequential Search** example, time to compelte the search also depends on the input size N
 - Assume the numebr of steps to completion as ``f(n)``
-    - n is the size of the input
+    - ``n`` is the size of the input
 
 If we compare two algorithms, ``f1(n) = 1000``, ``f2(n) = n``
 ![](/images/orderofcomplexity.png)
 
-f2(n) and f5(n) = 0.5*n - minor differences, can ignore minor differences between each group
+``f2(n) and f5(n) = 0.5*n`` - minor differences, can ignore minor differences between each group
 
 ## Orders of Complexity 
 - Group of "orders" or "familes" 
