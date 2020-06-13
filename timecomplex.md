@@ -294,3 +294,11 @@ int fibonnaciRecursive (int n) {
 }
 ```
 - ``T(n) = T(n-1) + T(n-2) + a ``: Reccurence relation
+
+
+## Main rules - How time scales with respect to different variables
+1. Different steps get added 
+2. Drop constants. Just want to know how it scales (linearly, quadratically, etc.)
+3. Different inputs = different variables
+    - O(N<sup>2</sup>) -> O(a * b)
+4. Drop non dominant terms
