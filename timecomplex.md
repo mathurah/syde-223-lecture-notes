@@ -72,7 +72,7 @@ n^2 = O(n^2)
 - Polynomial functions is ``O(n^k)``, ``k`` is the largest power value
 - The highest order component dominates Big ).
 ```cpp
-n! + 5*3^n 500 * 2^n n^3 + 12n^2 +  99 = O(n!)``
+n! + 5*3^n 500 * 2^n n^3 + 12n^2 +  99 = O(n!)
 ```
 
 ## Big-O Notation Defined
@@ -85,7 +85,7 @@ n! + 5*3^n 500 * 2^n n^3 + 12n^2 +  99 = O(n!)``
     - ``f`` may be smaller than ``g``
     - ``f`` may be similar to ``g``
 - Don't care about small ``n``. Let's talk big (n approaching infinite)
-- As long as ``g`` is NOT *too much bigger* than f (finite constant ``K`` times bigger is OK), f belongs to the same group as ``g``. 
+- As long as ``g`` is NOT *too much bigger* than ``f`` (finite constant ``K`` times bigger is OK), f belongs to the same group as ``g``. 
 
 ## Practice of Algorithmic Analysis
 - Usually, when we write ``f(n) = O(g(n))``, we mean ``f(n)`` has the same order of complexity as ``g(n)`` has
@@ -168,7 +168,7 @@ for (int i = 1; i <=n; i+ =10) {
 - If each loop is repeated ``a*n`` times, ``a`` is some constant
 - And there are ``k`` levels of nested loops, then it is:
 
-O(n<sup>k</sup>)
+## O(n<sup>k</sup>)
 
 ### Example 4
 ``` cpp
