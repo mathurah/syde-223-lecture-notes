@@ -302,3 +302,6 @@ int fibonnaciRecursive (int n) {
 3. Different inputs = different variables
     - O(N<sup>2</sup>) -> O(a * b)
 4. Drop non dominant terms
+
+
+Useful website: https://developerinsider.co/big-o-notation-explained-with-examples/
