@@ -44,7 +44,7 @@ If we compare two algorithms, ``f1(n) = 1000``, ``f2(n) = n``
 - When ``k`` is a constant
     - ``1, 1000, any k*1``
     - ``0.5*n, n, any k*n``
-    - ``0.005* n<sup>2</sup>. any k*n<sup>2</sup>
+    - 0.005* n<sup>2</sup>. any k*n<sup>2</sup>
 
 ## Common Orders of Compelxity
 **Time Complexity** | **Type** 
