@@ -16,7 +16,7 @@
 - N: number of items/iterations 
 - size of the input ``(n)`` is the size of an array ``(n = size )``
 - best case, ``A[0] = K. ``
-- average cas, consider all different ``A[]`` with different k
+- average case, consider all different ``A[]`` with different k
 - **worst case**, last item is K (or no K in array)
 ```cpp
 int SequentialSearch(int A[], int size, int K) {
