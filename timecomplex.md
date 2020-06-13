@@ -77,18 +77,18 @@ n! + 5*3^n 500 * 2^n n^3 + 12n^2 +  99 = O(n!)``
 
 ## Big-O Notation Defined
 - Formal math notation 
-- A function ``f(n)`` is classified as ``O(g(n))`` if there exists two **positive constants** K and n- such that 
+- A function ``f(n)`` is classified as ``O(g(n))`` if there exists two **positive constants** ``K`` and ``n`` - such that 
     - ``|f(n)| < K|g(n) | for all n > n0 ``
 - Since algorithm steps cannot be negative, we often deal with ``f(n) < K*g(n), for all n > n0``
 - ``f(n) is O(g(n))`` is sometimes written as ``f(n) = O(g(n))``
 - Informally, this means "f us not much bigger than g"
-    - f may be smaller than g
-    - f may be simialr to g
-- Don't care about small n. Let's talk big (n approaching infinite)
-- As long as g is NOT *too much bigger* than f (finite constant ``K`` times bigger is OK), f belongs to the same group as g. 
+    - ``f`` may be smaller than ``g``
+    - ``f`` may be similar to ``g``
+- Don't care about small ``n``. Let's talk big (n approaching infinite)
+- As long as ``g`` is NOT *too much bigger* than f (finite constant ``K`` times bigger is OK), f belongs to the same group as ``g``. 
 
 ## Practice of Algorithmic Analysis
-- Usually, when we write ``f(n) = O(g(n))``, we mean f(n) has the same order of complexity as g(n) has
+- Usually, when we write ``f(n) = O(g(n))``, we mean ``f(n)`` has the same order of complexity as ``g(n)`` has
     - Although mathematically, this only means ``g(n) could have an order higher than f(n). OR they have the same order ``
 - Answer with the lowest possible answer
 
