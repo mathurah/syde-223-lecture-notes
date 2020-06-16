@@ -56,3 +56,136 @@ A sequential list could be implemented...
 **Memory Usage** | Less flexible | More flexible
 **Memory Overhead** | Less | More due to pointers
 **ith node access** | Faster | Slower (serial search)
+
+### Sequential List Implementation 
+``` cpp
+#include "sequential-list.h"
+#include <iostream>
+using namespace std;
+
+SequentialList::SequentialList(unsigned int cap)
+{
+    capacity_ = cap;
+    size_ = 0;
+    data_ = new DataType[capacity_];
+
+}
+
+SequentialList::~SequentialList()
+{
+    delete [] data_;
+    data_ = nullptr;
+}
+
+unsigned int SequentialList::size() const // const means you cannot change the value of the variable
+{
+    return size_;
+}
+
+unsigned int SequentialList::capacity() const
+{
+    return capacity_;
+}
+
+bool SequentialList::empty() const
+{
+    return size() == 0;
+
+}
+
+bool SequentialList::full() const
+{
+    return size() == capacity();
+}
+
+SequentialList::DataType SequentialList::select(unsigned int index) const
+{
+    if (index < size()) {
+        return data_[index];
+    } else {
+        return data_[size() - 1];
+    }
+
+}
+
+unsigned int SequentialList::search(DataType val) const
+{
+    for (unsigned int i = 0; i < size(); i++) {
+        if (data_[i] == val) {
+            return i;
+        }
+    }
+    return size();
+}
+
+void SequentialList::print() const
+{
+   if (size() > 0){
+        for (unsigned i = 0; i < size(); i++) {
+            cout << data_[i] << " ";
+        }
+    } else {
+       cout << "There is nothing in the list." << endl;
+   }
+}
+
+bool SequentialList::insert(DataType val, unsigned int index)
+{  if (full() || index > size()) {
+        return false;
+    } else if (index < size()) {
+        for (unsigned int i = (size() - 1); i > index; i--) {
+            data_[i+1] = data_[i];
+        }
+        data_[index+1]=data_[index];
+    }
+
+    data_[index] = val;
+    size_++;
+
+    return true;
+}
+
+bool SequentialList::insert_front(DataType val)
+{
+    return insert(val, 0);
+}
+
+bool SequentialList::insert_back(DataType val)
+{
+    return insert(val, size());
+}
+
+bool SequentialList::remove(unsigned int index)
+{
+    //False: List is empty. index is greater than or equal to the size of the list
+    if(empty() || index >=size()) {
+        return false;
+    } else if(index < size()) {
+        for (unsigned int i = index; i < (size() -1); i++) {
+            data_[i] = data_[i + 1];
+        }
+    }
+    data_[size() -1] = NULL;
+    size_--;
+    return true;
+}
+
+bool SequentialList::remove_front()
+{
+    return remove(0);
+}
+
+bool SequentialList::remove_back()
+{
+    return remove((size()-1));
+}
+
+bool SequentialList::replace(unsigned int index, DataType val)
+{
+    if (index < size()){
+        return data_[index] = val;
+    } else {
+        return false;
+    }
+}
+```
