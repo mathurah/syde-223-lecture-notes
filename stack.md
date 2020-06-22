@@ -25,9 +25,6 @@
 - Only sypport insert and remove from the **same end**
 - Last in first out (LIFO)
 
-**Queue**
-- Only support insert from **one** end and remove from the **opposite** end 
-- First in first out (FIFO)
 
 ## Stack Abstract Data Type
 ![](/images/stack.png)
