@@ -15,3 +15,41 @@
     4. Right-Left
 
 ## Single Right Rotation
+- Insert to left child's left subtree
+![](images/single-right-rotation.png)
+
+## #Single Right Rotation - Algorithm
+- Input is alpha (the pointer to the unbalanced ancestor that is closest to the new node)
+- A is alpha's left
+- alpha's left = A's right
+- A's right = alpha
+- Let alpha's parent take A as the new child
+    - If alpha was the root of the whole tree make A to be the new root
+
+![](images/right-rotation-algo.png)
+![](images/right-rotation-demo.jpeg)
+
+## Single Left Rotation
+- Insert to right child's right subtree
+![](images/single-left-rotation.png)
+
+### Algorithm
+- Input is alpha
+- A is alpha's right
+- alpha's right = A's left
+- A's left = alpha
+- Let alpha's parent take A as the new child
+    - If alpha was the root of the whole tree, make A to be the new root
+
+![](images/left-rotation-algo.png)
+![](images/left-rotation-demo.jpeg)
+
+## Left-Right Rotation
+- Insert ot left child's right subtree
+
+### Algorithm
+- Input is alpha
+- A is alpha's left
+- B is A's right
+- Call single left rotation with input (A)
+- Call single right totation with input(alpha)
