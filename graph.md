@@ -50,6 +50,7 @@
 **Unweighted Graphs**
 If a vertice is connected to another edge, we have 1 (true) in the matrix, else, 0 (false)<br/>
 For undirected graphs, M[i][j] is always the same as M[j][i] in the 2D array 
+![Unweighted Graph](images/117402196_316739662909821_7787893861930009516_n.png)
 
 **Weighted Graphs** 
 For weighted edges, we store either the weight value (instead of 1 as we did for unweighted) or infinite (instead of 0 as we did for weighted)
