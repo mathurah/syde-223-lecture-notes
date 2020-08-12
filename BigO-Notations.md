@@ -1,4 +1,4 @@
-## What is worst case time complexity? k
+## What is worst case time complexity? 
 Focus on:
 - Worst case (this list is not the average)
 - When n is approaching infinity 
