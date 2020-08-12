@@ -44,7 +44,6 @@
 - supports faster query to check if two nodes are adjacent compared to a list
 - sequential array = adjacency matrix and preferred when most nodes are connected, and query of adjacency is frequent 
 - linked node = adjacency list and preferred when few nodes are connected, and query of adjacency is not frequent 
-
 ![](images/adjacency-matrix-diagram.png)
 
 **Unweighted Graphs**
@@ -55,6 +54,7 @@ For undirected graphs, M[i][j] is always the same as M[j][i] in the 2D array
 **Weighted Graphs** 
 For weighted edges, we store either the weight value (instead of 1 as we did for unweighted) or infinite (instead of 0 as we did for weighted)
 For directed graphs, M[j][i] is always the same as M[i][j] in the 2D array 
+![](images/117301600_614305676185669_3782122483951422904_n.png)
 
 ### Graph Search 
 1. Start from a starting node 
