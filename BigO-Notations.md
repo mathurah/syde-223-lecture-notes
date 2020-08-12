@@ -78,9 +78,9 @@ Defn: Auxillary space is the extra space or temporary space used by an algorithm
 **Quick Sort:** `O(n^2)`<br/> 
 
 ## Hashing 
-**Search:** `O(n)`
-**Insertion:** `O(n)`
-**Deletion:** `O(n)` 
+**Search:** `O(n)` <br/>
+**Insertion:** `O(n)`<br/>
+**Deletion:** `O(n)` <br/>
 
 =======
 
