@@ -41,8 +41,8 @@
 - Let alpha's parent take A as the new child
     - If alpha was the root of the whole tree, make A to be the new root
 
-![](images/left-rotation-algo.png)
-![](images/left-rotation-demo.jpeg)
+![](../images/left-rotation-algo.png)
+![](../images/left-rotation-demo.jpeg)
 
 ## Left-Right Rotation
 - Insert ot left child's right subtree
@@ -52,4 +52,4 @@
 - A is alpha's left
 - B is A's right
 - Call single left rotation with input (A)
-- Call single right totation with input(alpha)
+- Call single right rotation with input(alpha)
