@@ -2,6 +2,12 @@
 
 This repository contains the Lecture notes for Systems Design Engineering Data Structures and Algorithms Course in C++. 
 
+*To Dos:*
+- This includes everything up to Week 9 Meeting 1
+- Finish AVL tree notes
+- To dos @Shaahana add in time complexity notes for everything
+- Extra practice with Geeks for Geeks Questions and finsh all lecture notes
+
 ## Table of Contents
 ### Review
 1. [Classes](lecture1-classes-objects.md)
@@ -10,7 +16,7 @@ This repository contains the Lecture notes for Systems Design Engineering Data S
 [References](reference.md)
 ### Pre-Midterm Content (Weeks 1-8)
 2. [Dynamic Memory](lecture3-dynamic-memory.md)
-2. [Pointers](pointers.md) 
+3. [Pointers](pointers.md) 
     a. [Array Pointer](array-pointer.md)
     b. [Functions Pointers](functions-pointers.md)
 3. Lists
@@ -21,4 +27,16 @@ This repository contains the Lecture notes for Systems Design Engineering Data S
     a. [Time Complexity](timecomplex.md)
 6. [Stacks](stack.md), [Stack Sequential](/StackSequential), [Stack Demo Code](/Stack)
 7. [Queues](queue.md), [Queue Demo Code](/Queue)
-8. 
+
+### Trees
+8. Binary Trees
+    a. [Binary Tree](trees/Binary-Tree)
+    b. [Binary Search Tree Lab Code](/trees/binary-search-tree-demo.md)
+9. AVL Trees  
+    a. [AVL Tree](trees/AVL-trees.md)
+    b. [AVL Tree Lab Code](AVL-tree-demo.md)
+10. Graphs 
+a. []
+11. Sorting 
+12. Hashing 
+
