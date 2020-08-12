@@ -18,7 +18,7 @@
 - Insert to left child's left subtree
 ![](images/single-right-rotation.png)
 
-## #Single Right Rotation - Algorithm
+## Single Right Rotation - Algorithm
 - Input is alpha (the pointer to the unbalanced ancestor that is closest to the new node)
 - A is alpha's left
 - alpha's left = A's right
@@ -47,9 +47,15 @@
 ## Left-Right Rotation
 - Insert ot left child's right subtree
 
+![](../images/left-right-rotation.png)
+
 ### Algorithm
 - Input is alpha
 - A is alpha's left
 - B is A's right
 - Call single left rotation with input (A)
 - Call single right rotation with input(alpha)
+
+## Right-Left Rotation
+- Insert to right child's left subtree
+
