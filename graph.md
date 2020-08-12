@@ -2,6 +2,7 @@
 - A collection of nodes (verticies) connected by edges
 - A node represents an entity
 - An edge represents a pair-wise relationship between two nodes
+![](/images/basic-graph.png)
 
 ## Formal Definition of a Graph
 - A graph G can be defined as `G = (V, E)` where `V` is the set of node (verticies) and `E` is the set of edges
@@ -35,6 +36,14 @@
 2. Following the edges, when reaching the target node, return true
 3. If finish all the reachable nodes without seeing the target, return false.
 
+## Adjacency Matrix
+n nodes, n*n size 2D array 
+![](images/adjacency-matrix-diagram.png)
+**Unweighted Graphs**
+If a vertice is connected to another edge, we have 1 (true) in the matrix, else, 0 (false)<br/>
+For undirected graphs, M[i][j] is always the same as M[j][i] in the 2D array 
+**Weighted Graphs** 
+For weighted edges, we store either the weight value or infinite 
 
 ### Traversal
 *Ex. What are the nodes that are reachable?*
