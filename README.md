@@ -11,8 +11,8 @@ This repository contains the Lecture notes for Systems Design Engineering Data S
 ### Pre-Midterm Content (Weeks 1-8)
 2. [Dynamic Memory](lecture3-dynamic-memory.md)
 2. [Pointers](pointers.md) 
-a. [Array Pointer](array-pointer.md)
-b. [Functions Pointers](functions-pointers.md)
+    a. [Array Pointer](array-pointer.md)
+    b. [Functions Pointers](functions-pointers.md)
 3. Lists
     a.[Sequential List](sequential-list.md)
     b. [Doubly Linked List](doubly-linked-list.md)
@@ -20,4 +20,5 @@ b. [Functions Pointers](functions-pointers.md)
 5. Algorithmic Analysis 
     a. [Time Complexity](timecomplex.md)
 6. [Stacks](stack.md), [Stack Sequential](/StackSequential), [Stack Demo Code](/Stack)
-7. [Queues](queue.md), [Queue Demo Code](/Q)
+7. [Queues](queue.md), [Queue Demo Code](/Queue)
+8. 
