@@ -34,7 +34,7 @@ This repository contains the Lecture notes for Systems Design Engineering Data S
     b. [Binary Search Tree Lab Code](/trees/binary-search-tree-demo.md)
 9. AVL Trees  
     a. [AVL Tree](trees/AVL-trees.md)
-    b. [AVL Tree Lab Code](AVL-tree-demo.md)
+    b. [AVL Tree Lab Code](trees/AVL-tree-demo.md)
 10. Graphs 
 a. []
 11. Sorting 
