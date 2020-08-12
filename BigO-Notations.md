@@ -3,7 +3,9 @@ Focus on:
 - Worst case (this list is not the average)
 - When n is approaching infinity 
 - Difference between orders of complexity<br/>
+
 [More on Time Complexity](timecomplex.md)
+![General Time Complexity](images/general-time-complexities.png)
 
 ## Sequential List (Array)
 **Random Access ith item:** `O(1)`<br/>
