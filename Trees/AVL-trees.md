@@ -47,7 +47,6 @@
 ## Left-Right Rotation
 - Insert ot left child's right subtree
 
-![](../images/left-right-rotation.png)
 
 ### Algorithm
 - Input is alpha
@@ -55,6 +54,9 @@
 - B is A's right
 - Call single left rotation with input (A)
 - Call single right rotation with input(alpha)
+
+![](../images/left-right-rotation.png)
+![](../images/left-right-rotation-demo.jpg)
 
 ## Right-Left Rotation
 - Insert to right child's left subtree
@@ -65,6 +67,11 @@
 - B is A's left
 - Call single right rotation with input(A)
 - Call single left rotation with input (alpha)
+
+
+![](../images/right-left-rotation.png)
+![](../images/right-left-rotation-demo.jpg)
+
 
 ## Demo Code - AVL Tree insert
 ```cpp
