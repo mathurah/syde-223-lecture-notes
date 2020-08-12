@@ -1,4 +1,4 @@
-## What is worst case time complexity? 
+## What is worst case time complexity? k
 Focus on:
 - Worst case (this list is not the average)
 - When n is approaching infinity 
@@ -65,5 +65,13 @@ Focus on:
 **Delete:** `O(log(n))`<br/>
 
 ## Space Complexities 
-`O(n) for everything we've learned!`
+Defn: Auxillary space is the extra space or temporary space used by an algorithm 
+`O(n) for most, O(1) for bubble, selection ahd heap sort algorithms, and O(log(n) for quick sort algorithms.`
+
+## Sorting Algorithms
+**Bubble Sort:** `O(n^2)`<br/> 
+**Selection Sort:** `O(n^2)`<br/> 
+**Heap Sort:** `O(n(log(n)))`<br/> 
+**Merge Sort:** `O(n(log(n)))`<br/> 
+**Quick Sort:** `O(n^2)`<br/> 
 
