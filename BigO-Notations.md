@@ -65,7 +65,7 @@ Focus on:
 **Delete:** `O(log(n))`<br/>
 
 ## Space Complexities 
-Defn: Auxillary space is the extra space or temporary space used by an algorithm 
+Defn: Auxillary space is the extra space or temporary space used by an algorithm<br/>
 `O(n) for most, O(1) for bubble, selection ahd heap sort algorithms, and O(log(n) for quick sort algorithms.`
 
 ## Sorting Algorithms
