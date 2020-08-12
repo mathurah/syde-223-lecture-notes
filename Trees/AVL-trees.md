@@ -16,7 +16,7 @@
 
 ## Single Right Rotation
 - Insert to left child's left subtree
-![](images/single-right-rotation.png)
+![](../images/single-right-rotation.png)
 
 ## Single Right Rotation - Algorithm
 - Input is alpha (the pointer to the unbalanced ancestor that is closest to the new node)
@@ -26,8 +26,8 @@
 - Let alpha's parent take A as the new child
     - If alpha was the root of the whole tree make A to be the new root
 
-![](images/right-rotation-algo.png)
-![](images/right-rotation-demo.jpeg)
+![](../images/right-rotation-algo.png)
+![](../images/right-rotation-demo.jpeg)
 
 ## Single Left Rotation
 - Insert to right child's right subtree
@@ -586,7 +586,28 @@ int main(){
 ```
 
 ## AVL Delete
-1. Use the regular BST 
+1. Use the regular BST Delete operation to delete Node D
+2. From D's parent (if swapped, use the actually deleted node's parent), travels up to the root of the whole tree. If any node is unbalanced, re-balance it, and repeat until the root. 
+
+When a node is unbalanced, call it alpha. Find which subtree of alpha is higher, then the subtree's root is A.
+
+Then find which subtree of A is higher. Depending on the four cases, similar to insert, re-balnce the AVL tree using one of the four rotations.
+- **Single Right** (if A is left child; A's left is higher, or left right same)
+- **Single Left** (if A is right child; A's right is higher, or left right same)
+- **Left-Right** (if A is left child; A's right is higher)
+- **Right-Left** (if A is right child; A's left is higher)
+
+```cpp
+bool Delete(BSTNode **pT, key of BSTNode D): 
+```
+- Find D in T (similar to Search)
+- If D cannot be found, return false 
+- If D is found, then do the following:
+    1. If D is a leaf node is T (**no child**), remove it, then return true and terminate
+    2. If D has **only one** child node, cut D from the tree, and link D's parent directly to D's only child.
+    3. *If D has **two** child nodes, replace the values with the predecessor (or successor) respectively, and then return true and terminate
+        - Predecessor is the maximum value in the left subtree
+        - Successor is the smallest value in the right subtree 
 
 
 
