@@ -2,7 +2,7 @@
 Focus on:
 - Worst case (this list is not the average)
 - When n is approaching infinity 
-- Difference between orders of complexity
+- Difference between orders of complexity<br/>
 [More on Time Complexity](timecomplex.md)
 
 ## Sequential List (Array)
