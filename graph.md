@@ -37,21 +37,42 @@
 3. If finish all the reachable nodes without seeing the target, return false.
 
 ## Adjacency Matrix
-n nodes, n*n size 2D array 
+**Key Points**
+- n nodes, n*n size 2D array<br/>
+- uses storage size of O(n^2) 
+- list storage may be smaller when the graph is not very dense (not too many nodes are connected)
+- supports faster query to check if two nodes are adjacent compared to a list
+- sequential array = adjacency matrix and preferred when most nodes are connected, and query of adjacency is frequent 
+- linked node = adjacency list and preferred when few nodes are connected, and query of adjacency is not frequent 
+
 ![](images/adjacency-matrix-diagram.png)
+
 **Unweighted Graphs**
 If a vertice is connected to another edge, we have 1 (true) in the matrix, else, 0 (false)<br/>
 For undirected graphs, M[i][j] is always the same as M[j][i] in the 2D array 
-**Weighted Graphs** 
-For weighted edges, we store either the weight value or infinite 
 
-### Traversal
+**Weighted Graphs** 
+For weighted edges, we store either the weight value (instead of 1 as we did for unweighted) or infinite (instead of 0 as we did for weighted)
+For directed graphs, M[j][i] is always the same as M[i][j] in the 2D array 
+
+### Graph Search 
+1. Start from a starting node 
+2. Following the edges, when reaching the target node, return true 
+3. If finished all the reachable nodes without seeing the target, return false 
+
+### Graph Traversal
 *Ex. What are the nodes that are reachable?*
 1. Start form a starting node
 2. Following the edges, visiting each reachable node
 3. End until have visited each node that can be reached frmo the starting node
 
-Essentially, search is a special kind of traversal that has an early termination condition
+Essentially, search is a special kind of traversal that has an early termination condition<br/>
+*Refer to Week 10 Meeting 1 Lecture Notes for in-depth walkthrough* 
+
+*General Process for Traversal* 
+1. At some node *Nx*, access its adjacency set and insert unvisited nodes into some container C. 
+2. Remove a node from C, mark as visited, and insert all unvisited notes of the adjacency set into C once again. 
+3. Repeat until the container is empty. 
 
 ## Graph Traversal and Container Selection
 **Breadth-First-Search (BFS)**
