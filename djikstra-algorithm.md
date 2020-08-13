@@ -25,8 +25,8 @@ Essentially, we need to look to our matrix so we can continue to fill out this t
 5. If tempNode is the endNode, terminate. 
 6. Check if the old best paths from startNode to each pending nodes can be improved by going from startNode to this tempNode first and then from tempNode to the pending nodes. If so, improve old routes. 
 
-Demo Code 
-`#include <iostream> //cout
+**Demo Code**
+'#include <iostream> //cout
 #include <limits> // numeric_limits<int>::max()   // 2147483647
 #include <string> //string, to_string (c++11)
 
@@ -43,7 +43,7 @@ void dijkstra( int adjMatrix[SIZE][SIZE], int startNode, int endNode ) {
 	if(startNode == endNode) {
 		cout<< "From Node " << startNode<< " to itself is zero distance." << endl;
 		return;
-	}
+	}'
 
 	bool shortestDistFound[SIZE];  //whether we have found the shortest distance from startNode to each node in the graph. initially all false
 	int shortestDist[SIZE]; 		//the current known shortest distance from startNode to each node.
@@ -96,10 +96,10 @@ void dijkstra( int adjMatrix[SIZE][SIZE], int startNode, int endNode ) {
 			}
 		}
 	}
-}
+}'
 
 
-int main()
+'int main()
 {
 	// adjacency matrix representation
     int m[6][6]  =  { {0, 3, INT_MAX, INT_MAX, INT_MAX, 5},
@@ -121,4 +121,4 @@ int main()
 	// cout << INT_MAX << endl;   // 2147483647
 
     return 0;
-}`
+}'
