@@ -45,3 +45,4 @@ This repository contains the Lecture notes for Systems Design Engineering Data S
     - [Djikstra's Algorithm](djikstra-algorithm.md)
 12. [Sorting](Sorting.md)
 13. [Hashing](hashing.md)
+14. [Max Heap](heap.md)
