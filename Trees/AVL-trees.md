@@ -6,7 +6,7 @@
 ## AVL Insert
 1. Use the regular BST Insert operation, insert new Node N
 2. Find out if any of N's ancestors is unbalanced. 
-    - If not, jobt done and return. 
+    - If not, job done and return. 
     - If so, find out the pointer to the unbalanced ancestor that is closest to N
 3. Then re-balance the AVL tree using one of the four rotations, depending on the cases
     1. Single Right
