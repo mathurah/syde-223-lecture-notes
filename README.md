@@ -47,6 +47,6 @@ This repository contains the Lecture notes for Systems Design Engineering Data S
     - [AVL Tree Lab Code](Trees/AVL-tree-demo.md)
 11. Graphs
     - [Graphs](graph.md)
-    - [Djikstra's Algorithm](Djikstra's Algorithm.md)
+    - [Djikstra's Algorithm](djikstra-algorithm.md)
 12. [Sorting](Sorting.md)
 13. [Hashing](hashing.md)
