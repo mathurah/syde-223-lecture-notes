@@ -49,5 +49,5 @@ This repository contains the Lecture notes for Systems Design Engineering Data S
     - [Graphs](graphs.md)
     - [Djikstra's Algorithm](djikstra-algorithm.md)
 12. [Sorting](Sorting.md)
-13. Hashing 
+13. [Hashing](hashing.md)
 
