@@ -30,6 +30,7 @@ This repository contains the Lecture notes for Systems Design Engineering Data S
     - [Recursion Demo Code](/Recursion)
 6. Algorithmic Analysis
     - [Time Complexity](timecomplex.md)
+    - [Big O](BigO-Notations.md)
 7. Stacks
     - [Stacks](stack.md)
     - [Stack Sequential](/StackSequential)
