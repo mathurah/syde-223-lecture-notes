@@ -3,7 +3,9 @@ Focus on:
 - Worst case (this list is not the average)
 - When n is approaching infinity 
 - Difference between orders of complexity<br/>
+
 [More on Time Complexity](timecomplex.md)
+![General Time Complexity](images/general-time-complexities.png)
 
 ## Sequential List (Array)
 **Random Access ith item:** `O(1)`<br/>
@@ -65,11 +67,7 @@ Focus on:
 **Delete:** `O(log(n))`<br/>
 
 ## Space Complexities 
-<<<<<<< HEAD
 Defn: Auxillary space is the extra space or temporary space used by an algorithm.<br/>
-=======
-Defn: Auxillary space is the extra space or temporary space used by an algorithm<br/>
->>>>>>> d8a959fad821046b219d01ceb9cc18e7d3fe835f
 `O(n) for most, O(1) for bubble, selection ahd heap sort algorithms, and O(log(n) for quick sort algorithms.`
 
 ## Sorting Algorithms
@@ -78,8 +76,12 @@ Defn: Auxillary space is the extra space or temporary space used by an algorithm
 **Heap Sort:** `O(n(log(n)))`<br/> 
 **Merge Sort:** `O(n(log(n)))`<br/> 
 **Quick Sort:** `O(n^2)`<br/> 
-<<<<<<< HEAD
+
+## Hashing 
+**Search:** `O(n)` <br/>
+**Insertion:** `O(n)`<br/>
+**Deletion:** `O(n)` <br/>
 
 =======
->>>>>>> d8a959fad821046b219d01ceb9cc18e7d3fe835f
+
 
