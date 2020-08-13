@@ -2,12 +2,6 @@
 
 This repository contains the Lecture notes for Systems Design Engineering Data Structures and Algorithms Course in C++.
 
-**To Dos:**
-- This includes everything up to Week 9 Meeting 1
-- Finish AVL tree notes
-- To dos @Shaahana add in time complexity notes for everything + graphs tomorrow morning
-- Extra practice with Geeks for Geeks Questions and finsh all lecture notes
-
 ## Table of Contents
 ### Review
 1. Review
@@ -30,6 +24,7 @@ This repository contains the Lecture notes for Systems Design Engineering Data S
     - [Recursion Demo Code](/Recursion)
 6. Algorithmic Analysis
     - [Time Complexity](timecomplex.md)
+    - [Master Big O Document](BigO-Notations.md)
 7. Stacks
     - [Stacks](stack.md)
     - [Stack Sequential](/StackSequential)
