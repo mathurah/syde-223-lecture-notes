@@ -1,7 +1,7 @@
 # Pointers
 
 ## Learning Questions
-- What is a poiinter in C ++? 
+- What is a pointer in C ++? 
 - What is a constructor in C++?
 
 **Pointer** is a variable that stores the memory address of a variable.
